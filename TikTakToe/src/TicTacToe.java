@@ -2,10 +2,6 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.lang.reflect.Method;
-import java.util.*;
-
-
 
 public class TicTacToe extends JFrame implements ActionListener {
     JFrame frame = new JFrame();
@@ -14,7 +10,7 @@ public class TicTacToe extends JFrame implements ActionListener {
 
     private String [] buttons = {"Tl","Tm","Tr","Ml","Mm","Mr","Bl","Bm","Br"};
 
-    
+
 
     TicTacToe() {
         frame.setSize(500,600);
@@ -33,8 +29,6 @@ public class TicTacToe extends JFrame implements ActionListener {
         JButton reset = new JButton("Reset");
         Panel.add(reset);
         frame.setVisible(true);
-
-
     }
 
     @Override
