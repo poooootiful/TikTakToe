@@ -1,3 +1,3 @@
 # TikTakToe
-AJ Assignment 1
-Group Assigment 
+AJ Assignment 1:
+Av johanna
