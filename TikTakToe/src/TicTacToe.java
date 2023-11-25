@@ -42,6 +42,22 @@ public class TicTacToe extends JFrame implements ActionListener {
         JButton reset = new JButton("Reset");
         Panel.add(reset);
         frame.setVisible(true);
+
+        do {
+
+
+            switch (Turn) {
+                case 1:
+
+                case 2:
+
+                case 3:
+
+            }
+            
+
+
+        }while (true);
     }
 
     @Override
