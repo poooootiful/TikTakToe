@@ -2,6 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Random;
 
 public class TicTacToe extends JFrame implements ActionListener {
     JFrame frame = new JFrame();
@@ -13,9 +14,29 @@ public class TicTacToe extends JFrame implements ActionListener {
 
      int OTurn;
 
+     JButton Tr = new JButton();
+     JButton Tm = new JButton();
+     JButton Tl = new JButton();
+     JButton Mr = new JButton();
+     JButton Mm = new JButton();
+     JButton Ml = new JButton();
+     JButton Br = new JButton();
+     JButton Bm = new JButton();
+     JButton Bl = new JButton();
 
-    public String [] buttons = {"","","","","","","","",""};
 
+     public static void RandomTurn () {
+         int Xturn = 1;
+         int Oturn =2;
+
+         int number = 2;
+
+         if (number == Xturn) {
+             System.out.println("It's X turn");
+         }else if (number == Oturn) {
+             System.out.println("It's O Turn");
+         }
+    }
 
     TicTacToe() {
         frame.setSize(500,700);
@@ -31,46 +52,30 @@ public class TicTacToe extends JFrame implements ActionListener {
 
         JLabel text = new JLabel();
         Text.add(text);
+        RandomTurn (); 
+
+        Turn = 1;
+        XTurn = 1;
+        OTurn = 2;
+
+        Buttons.add(Tr);
+        Tr.addActionListener(this);
 
 
-       for (String title:buttons) {
-           JButton btn = new JButton(title);
-           btn.addActionListener(this);
-           Buttons.add(btn);
-       }
+
 
         JButton reset = new JButton("Reset");
         Panel.add(reset);
         frame.setVisible(true);
 
-        do {
 
-
-            switch (Turn) {
-                case 1:
-
-                case 2:
-
-                case 3:
-
-            }
-            
-
-
-        }while (true);
     }
+
+
+
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        String btn = e.getActionCommand();
 
-
-        if (btn.isEmpty() && Turn==XTurn) {
-                btn.replaceFirst("", "X");
-
-        }else if (e.getActionCommand().isEmpty() && Turn==OTurn){
-            btn.replaceFirst("","O");
-
-        }
     }
 }
