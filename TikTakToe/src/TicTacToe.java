@@ -1,10 +1,7 @@
-import org.w3c.dom.Text;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.image.renderable.ContextualRenderedImageFactory;
 import java.util.Random;
 
 public class TicTacToe extends JFrame implements ActionListener {
