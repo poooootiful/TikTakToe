@@ -8,6 +8,7 @@ public class TicTacToe extends JFrame implements ActionListener {
     JPanel Buttons = new JPanel();
     JPanel TurnText = new JPanel();
     JPanel ResetPanel = new JPanel();
+
      JButton Tr = new JButton("Tr");
      JButton Tm = new JButton("Tm");
      JButton Tl = new JButton("Tl");
@@ -31,6 +32,7 @@ public class TicTacToe extends JFrame implements ActionListener {
     }
     TicTacToe() {
         frame.setSize(500,700);
+
         Buttons.setLayout(new GridLayout(3, 3));
         frame.add(Buttons);
         Buttons.setSize(500,500);
@@ -61,6 +63,7 @@ public class TicTacToe extends JFrame implements ActionListener {
         Buttons.add(Bm);
         Bm.addActionListener(this);
         Buttons.add(Br);
+        Br.addActionListener(this);
 
 
         JButton reset = new JButton("Reset");
@@ -71,15 +74,18 @@ public class TicTacToe extends JFrame implements ActionListener {
         TurnCheck = random();
         System.out.println(TurnCheck);
 
+        do {
 
-        if (TurnCheck==Xturn){
-            WhoTurn.setText("It's X Turn");
-            TurnCount = TurnCount +1;
-        }
-        if (TurnCheck==Oturn) {
-            WhoTurn.setText("It's O Turn");
-            TurnCount = TurnCount +1;
-        }
+
+            while (TurnCheck == Xturn) {
+                WhoTurn.setText("It's X Turn");
+                TurnCount = TurnCount + 1;
+            }
+            while (TurnCheck == Oturn) {
+                WhoTurn.setText("It's O Turn");
+                TurnCount = TurnCount + 1;
+            }
+        }while (TurnCount!=9);
     }
 
     @Override
@@ -88,98 +94,75 @@ public class TicTacToe extends JFrame implements ActionListener {
 
         //Tl Button
         if (TurnCheck==Xturn && btn.matches("Tl")) {
-            Tl.doClick();
             Tl.setText("X");
-        }
-        if (TurnCheck==Oturn && btn.matches("Tl")) {
-            Tl.doClick();
+            TurnCheck = TurnCheck+1;
+        } else if (TurnCheck==Oturn && btn.matches("Tl")) {
             Tl.setText("O");
+            TurnCheck = TurnCheck -1;
         }
         //Tm Button
         if (TurnCheck==Xturn && btn.matches("Tm")) {
-            Tm.doClick();
             Tm.setText("X");
-        }
-        if (TurnCheck==Oturn && btn.matches("Tm")) {
-            Tm.doClick();
+            TurnCheck = TurnCheck+1;
+        } else if (TurnCheck==Oturn && btn.matches("Tm")) {
             Tm.setText("O");
+            TurnCheck = TurnCheck -1;
         }
         //Tr Button
         if (TurnCheck==Xturn && btn.matches("Tr")) {
-            Tr.doClick();
             Tr.setText("X");
-            TurnCheck = Oturn;
-        }
-        if (TurnCheck==Oturn && btn.matches("Tr")) {
-            Tr.doClick();
+            TurnCheck = TurnCheck+1;
+        } else if (TurnCheck==Oturn && btn.matches("Tr")) {
             Tr.setText("O");
-            TurnCheck = Xturn;
+            TurnCheck = TurnCheck -1;
+
         }
         //Ml Button
         if (TurnCheck==Xturn && btn.matches("Ml")) {
-            Ml.doClick();
             Ml.setText("X");
-            TurnCheck = Oturn;
-        }
-        if (TurnCheck==Oturn && btn.matches("Ml")) {
-            Ml.doClick();
+            TurnCheck = TurnCheck+1;
+        } else if (TurnCheck==Oturn && btn.matches("Ml")) {
             Ml.setText("O");
-            TurnCheck = Xturn;
+            TurnCheck = TurnCheck -1;
         }
         //Mm Button
         if (TurnCheck==Xturn && btn.matches("Mm")) {
-            Mm.doClick();
             Mm.setText("X");
-            TurnCheck = Oturn;
-        }
-        if (TurnCheck==Oturn && btn.matches("Mm")) {
-            Mm.doClick();
+            TurnCheck = TurnCheck+1;
+        } else if (TurnCheck==Oturn && btn.matches("Mm")) {
             Mm.setText("O");
-            TurnCheck = Xturn;
         }
         //Mr Button
         if (TurnCheck==Xturn && btn.matches("Mr")) {
-            Mr.doClick();
             Mr.setText("X");
-            TurnCheck = Oturn;
-        }
-        if (TurnCheck==Oturn && btn.matches("Mr")) {
-            Mr.doClick();
+            TurnCheck = TurnCheck+1;
+        } else if (TurnCheck==Oturn && btn.matches("Mr")) {
             Mr.setText("O");
-            TurnCheck = Xturn;
+            TurnCheck = TurnCheck -1;
         }
         //Bl Button
         if (TurnCheck==Xturn && btn.matches("Bl")) {
-            Bl.doClick();
             Bl.setText("X");
-            TurnCheck = Oturn;
-        }
-        if (TurnCheck==Oturn && btn.matches("Bl")) {
-            Bl.doClick();
+            TurnCheck = TurnCheck+1;
+        } else if (TurnCheck==Oturn && btn.matches("Bl")) {
             Bl.setText("O");
-            TurnCheck = Xturn;
+            TurnCheck = TurnCheck -1;
         }
         //Bm Button
         if (TurnCheck==Xturn && btn.matches("Bm")) {
-            Bm.doClick();
             Bm.setText("X");
-            TurnCheck = Oturn;
-        }
-        if (TurnCheck==Oturn && btn.matches("Bm")) {
-            Bm.doClick();
+            TurnCheck = TurnCheck+1;
+        } else if (TurnCheck==Oturn && btn.matches("Bm")) {
             Bm.setText("O");
-            TurnCheck = Xturn;
+            TurnCheck = TurnCheck -1;
         }
         //Br Button
         if (TurnCheck==Xturn && btn.matches("Br")) {
-            Br.doClick();
             Br.setText("X");
-            TurnCheck = Oturn;
-        }
-        if (TurnCheck==Oturn && btn.matches("Br")) {
-            Br.doClick();
+            TurnCheck = TurnCheck+1;
+        } else if (TurnCheck==Oturn && btn.matches("Br")) {
             Br.setText("O");
-            TurnCheck = Xturn;
+            TurnCheck = TurnCheck -1;
         }
     }
 }
