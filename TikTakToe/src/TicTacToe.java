@@ -1,5 +1,3 @@
-import com.sun.source.tree.IfTree;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -206,6 +204,7 @@ public class TicTacToe extends JFrame implements ActionListener {
             TurnCount = TurnCount + 1;
             System.out.println(TurnCount);
         }
+
         if (TurnCount==5) {
             //XWin
             if (Mm.getText() == "X") {
@@ -475,80 +474,68 @@ public class TicTacToe extends JFrame implements ActionListener {
         if (TurnCount==9) {
             //XWin
             if (Mm.getText() == "X") {
-                if (Ml.getText()=="X" &&Mr.getText()=="X" ) {
+                if (Ml.getText() == "X" && Mr.getText() == "X") {
                     Buttons.setBackground(Color.RED);
                 }
-                if (Tm.getText()=="X" && Bm.getText()=="X") {
+                if (Tm.getText() == "X" && Bm.getText() == "X") {
                     Buttons.setBackground(Color.RED);
                 }
-                if (Tl.getText()=="X" && Br.getText()=="X") {
+                if (Tl.getText() == "X" && Br.getText() == "X") {
                     Buttons.setBackground(Color.RED);
                 }
-                if (Tr.getText()=="X" && Bl.getText()=="X") {
-                    Buttons.setBackground(Color.RED);
-                }
-            }
-            if (Tl.getText()=="X") {
-                if (Tm.getText()=="X" && Tr.getText()=="X") {
-                    Buttons.setBackground(Color.RED);
-                }
-                if (Ml.getText()=="X" && Bl.getText()=="X"){
+                if (Tr.getText() == "X" && Bl.getText() == "X") {
                     Buttons.setBackground(Color.RED);
                 }
             }
-            if (Br.getText()=="X") {
-                if (Bm.getText()=="X" && Bl.getText()=="X") {
+            if (Tl.getText() == "X") {
+                if (Tm.getText() == "X" && Tr.getText() == "X") {
                     Buttons.setBackground(Color.RED);
                 }
-                if (Mr.getText()=="X" && Tr.getText()=="X"){
+                if (Ml.getText() == "X" && Bl.getText() == "X") {
+                    Buttons.setBackground(Color.RED);
+                }
+            }
+            if (Br.getText() == "X") {
+                if (Bm.getText() == "X" && Bl.getText() == "X") {
+                    Buttons.setBackground(Color.RED);
+                }
+                if (Mr.getText() == "X" && Tr.getText() == "X") {
                     Buttons.setBackground(Color.RED);
                 }
             }
 
 
             //O WIn
-            if (Mm.getText()=="O") {
-                if (Ml.getText()=="O" && Mr.getText()=="O") {
+            if (Mm.getText() == "O") {
+                if (Ml.getText() == "O" && Mr.getText() == "O") {
                     Buttons.setBackground(Color.RED);
                 }
-                if (Tm.getText()=="O" && Bm.getText()=="O") {
+                if (Tm.getText() == "O" && Bm.getText() == "O") {
                     Buttons.setBackground(Color.RED);
                 }
-                if (Tl.getText()=="O" && Br.getText()=="O") {
+                if (Tl.getText() == "O" && Br.getText() == "O") {
                     Buttons.setBackground(Color.RED);
                 }
-                if (Tr.getText()=="O" && Bl.getText()=="O"){
-                    Buttons.setBackground(Color.RED);
-                }
-            }
-            if (Tl.getText()=="O") {
-                if (Tm.getText()=="O" && Tr.getText()=="O") {
-                    Buttons.setBackground(Color.RED);
-                }
-                if (Ml.getText()=="O" && Bl.getText()=="O"){
+                if (Tr.getText() == "O" && Bl.getText() == "O") {
                     Buttons.setBackground(Color.RED);
                 }
             }
-            if (Br.getText()=="O") {
-                if (Bm.getText()=="O" && Bl.getText()=="O") {
+            if (Tl.getText() == "O") {
+                if (Tm.getText() == "O" && Tr.getText() == "O") {
                     Buttons.setBackground(Color.RED);
                 }
-                if (Mr.getText()=="O" && Tr.getText()=="O"){
+                if (Ml.getText() == "O" && Bl.getText() == "O") {
                     Buttons.setBackground(Color.RED);
                 }
             }
-
-        }
-        if (btn.matches("Reset")) {
-            Tl.setText("");
-            Tm.setText("");
-            Tr.setText("");
-            Ml.setText("");
-            Mm.setText("");
-            Mr.setText("");
-            Bl.setText("");
-            Bm.setText("");
-            Br.setText("");
+            if (Br.getText() == "O") {
+                if (Bm.getText() == "O" && Bl.getText() == "O") {
+                    Buttons.setBackground(Color.RED);
+                }
+                if (Mr.getText() == "O" && Tr.getText() == "O") {
+                    Buttons.setBackground(Color.RED);
+                }
+            }
         }
     }
 }
