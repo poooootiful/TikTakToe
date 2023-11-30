@@ -102,6 +102,7 @@ public class TicTacToe extends JFrame implements ActionListener {
             TurnCount = TurnCount + 1;
             System.out.println(TurnCount);
         }
+
         //Tm Button
         if (TurnCheck==Xturn && btn.matches("Tm")) {
             Tm.setText("X");
@@ -114,6 +115,7 @@ public class TicTacToe extends JFrame implements ActionListener {
             TurnCount = TurnCount + 1;
             System.out.println(TurnCount);
         }
+
         //Tr Button
         if (TurnCheck==Xturn && btn.matches("Tr")) {
             Tr.setText("X");
@@ -139,6 +141,7 @@ public class TicTacToe extends JFrame implements ActionListener {
             TurnCount = TurnCount + 1;
             System.out.println(TurnCount);
         }
+
         //Mm Button
         if (TurnCheck==Xturn && btn.matches("Mm")) {
             Mm.setText("X");
@@ -151,6 +154,7 @@ public class TicTacToe extends JFrame implements ActionListener {
             TurnCount = TurnCount + 1;
             System.out.println(TurnCount);
         }
+
         //Mr Button
         if (TurnCheck==Xturn && btn.matches("Mr")) {
             Mr.setText("X");
@@ -163,6 +167,7 @@ public class TicTacToe extends JFrame implements ActionListener {
             TurnCount = TurnCount + 1;
             System.out.println(TurnCount);
         }
+
         //Bl Button
         if (TurnCheck==Xturn && btn.matches("Bl")) {
             Bl.setText("X");
@@ -175,6 +180,7 @@ public class TicTacToe extends JFrame implements ActionListener {
             TurnCount = TurnCount + 1;
             System.out.println(TurnCount);
         }
+
         //Bm Button
         if (TurnCheck==Xturn && btn.matches("Bm")) {
             Bm.setText("X");
@@ -187,6 +193,7 @@ public class TicTacToe extends JFrame implements ActionListener {
             TurnCount = TurnCount + 1;
             System.out.println(TurnCount);
         }
+
         //Br Button
         if (TurnCheck==Xturn && btn.matches("Br")) {
             Br.setText("X");
@@ -199,22 +206,349 @@ public class TicTacToe extends JFrame implements ActionListener {
             TurnCount = TurnCount + 1;
             System.out.println(TurnCount);
         }
+        if (TurnCount==5) {
+            //XWin
+            if (Mm.getText() == "X") {
+                if (Ml.getText()=="X" &&Mr.getText()=="X" ) {
+                    Buttons.setBackground(Color.RED);
+                }
+                if (Tm.getText()=="X" && Bm.getText()=="X") {
+                    Buttons.setBackground(Color.RED);
+                }
+                if (Tl.getText()=="X" && Br.getText()=="X") {
+                    Buttons.setBackground(Color.RED);
+                }
+                if (Tr.getText()=="X" && Bl.getText()=="X") {
+                    Buttons.setBackground(Color.RED);
+                }
+            }
+            if (Tl.getText()=="X") {
+                if (Tm.getText()=="X" && Tr.getText()=="X") {
+                    Buttons.setBackground(Color.RED);
+                }
+                if (Ml.getText()=="X" && Bl.getText()=="X"){
+                    Buttons.setBackground(Color.RED);
+                }
+            }
+            if (Br.getText()=="X") {
+                if (Bm.getText()=="X" && Bl.getText()=="X") {
+                    Buttons.setBackground(Color.RED);
+                }
+                if (Mr.getText()=="X" && Tr.getText()=="X"){
+                    Buttons.setBackground(Color.RED);
+                }
+            }
+
+
+            //O WIn
+            if (Mm.getText()=="O") {
+                if (Ml.getText()=="O" && Mr.getText()=="O") {
+                    Buttons.setBackground(Color.RED);
+                }
+                if (Tm.getText()=="O" && Bm.getText()=="O") {
+                    Buttons.setBackground(Color.RED);
+                }
+                if (Tl.getText()=="O" && Br.getText()=="O") {
+                    Buttons.setBackground(Color.RED);
+                }
+                if (Tr.getText()=="O" && Bl.getText()=="O"){
+                    Buttons.setBackground(Color.RED);
+                }
+            }
+            if (Tl.getText()=="O") {
+                if (Tm.getText()=="O" && Tr.getText()=="O") {
+                    Buttons.setBackground(Color.RED);
+                }
+                if (Ml.getText()=="O" && Bl.getText()=="O"){
+                    Buttons.setBackground(Color.RED);
+                }
+            }
+            if (Br.getText()=="O") {
+                if (Bm.getText()=="O" && Bl.getText()=="O") {
+                    Buttons.setBackground(Color.RED);
+                }
+                if (Mr.getText()=="O" && Tr.getText()=="O"){
+                    Buttons.setBackground(Color.RED);
+                }
+            }
+        }
         if (TurnCount==6) {
+            //XWin
+            if (Mm.getText() == "X") {
+                if (Ml.getText()=="X" &&Mr.getText()=="X" ) {
+                    Buttons.setBackground(Color.RED);
+                }
+                if (Tm.getText()=="X" && Bm.getText()=="X") {
+                    Buttons.setBackground(Color.RED);
+                }
+                if (Tl.getText()=="X" && Br.getText()=="X") {
+                    Buttons.setBackground(Color.RED);
+                }
+                if (Tr.getText()=="X" && Bl.getText()=="X") {
+                    Buttons.setBackground(Color.RED);
+                }
+            }
+            if (Tl.getText()=="X") {
+                if (Tm.getText()=="X" && Tr.getText()=="X") {
+                    Buttons.setBackground(Color.RED);
+                }
+                if (Ml.getText()=="X" && Bl.getText()=="X"){
+                    Buttons.setBackground(Color.RED);
+                }
+            }
+            if (Br.getText()=="X") {
+                if (Bm.getText()=="X" && Bl.getText()=="X") {
+                    Buttons.setBackground(Color.RED);
+                }
+                if (Mr.getText()=="X" && Tr.getText()=="X"){
+                    Buttons.setBackground(Color.RED);
+                }
+            }
+
+
+            //O WIn
+            if (Mm.getText()=="O") {
+                if (Ml.getText()=="O" && Mr.getText()=="O") {
+                    Buttons.setBackground(Color.RED);
+                }
+                if (Tm.getText()=="O" && Bm.getText()=="O") {
+                    Buttons.setBackground(Color.RED);
+                }
+                if (Tl.getText()=="O" && Br.getText()=="O") {
+                    Buttons.setBackground(Color.RED);
+                }
+                if (Tr.getText()=="O" && Bl.getText()=="O"){
+                    Buttons.setBackground(Color.RED);
+                }
+            }
+            if (Tl.getText()=="O") {
+                if (Tm.getText()=="O" && Tr.getText()=="O") {
+                    Buttons.setBackground(Color.RED);
+                }
+                if (Ml.getText()=="O" && Bl.getText()=="O"){
+                    Buttons.setBackground(Color.RED);
+                }
+            }
+            if (Br.getText()=="O") {
+                if (Bm.getText()=="O" && Bl.getText()=="O") {
+                    Buttons.setBackground(Color.RED);
+                }
+                if (Mr.getText()=="O" && Tr.getText()=="O"){
+                    Buttons.setBackground(Color.RED);
+                }
+            }
 
         }
 
         if (TurnCount==7) {
+            //XWin
+            if (Mm.getText() == "X") {
+                if (Ml.getText()=="X" &&Mr.getText()=="X" ) {
+                    Buttons.setBackground(Color.RED);
+                }
+                if (Tm.getText()=="X" && Bm.getText()=="X") {
+                    Buttons.setBackground(Color.RED);
+                }
+                if (Tl.getText()=="X" && Br.getText()=="X") {
+                    Buttons.setBackground(Color.RED);
+                }
+                if (Tr.getText()=="X" && Bl.getText()=="X") {
+                    Buttons.setBackground(Color.RED);
+                }
+            }
+            if (Tl.getText()=="X") {
+                if (Tm.getText()=="X" && Tr.getText()=="X") {
+                    Buttons.setBackground(Color.RED);
+                }
+                if (Ml.getText()=="X" && Bl.getText()=="X"){
+                    Buttons.setBackground(Color.RED);
+                }
+            }
+            if (Br.getText()=="X") {
+                if (Bm.getText()=="X" && Bl.getText()=="X") {
+                    Buttons.setBackground(Color.RED);
+                }
+                if (Mr.getText()=="X" && Tr.getText()=="X"){
+                    Buttons.setBackground(Color.RED);
+                }
+            }
 
+
+            //O WIn
+            if (Mm.getText()=="O") {
+                if (Ml.getText()=="O" && Mr.getText()=="O") {
+                    Buttons.setBackground(Color.RED);
+                }
+                if (Tm.getText()=="O" && Bm.getText()=="O") {
+                    Buttons.setBackground(Color.RED);
+                }
+                if (Tl.getText()=="O" && Br.getText()=="O") {
+                    Buttons.setBackground(Color.RED);
+                }
+                if (Tr.getText()=="O" && Bl.getText()=="O"){
+                    Buttons.setBackground(Color.RED);
+                }
+            }
+            if (Tl.getText()=="O") {
+                if (Tm.getText()=="O" && Tr.getText()=="O") {
+                    Buttons.setBackground(Color.RED);
+                }
+                if (Ml.getText()=="O" && Bl.getText()=="O"){
+                    Buttons.setBackground(Color.RED);
+                }
+            }
+            if (Br.getText()=="O") {
+                if (Bm.getText()=="O" && Bl.getText()=="O") {
+                    Buttons.setBackground(Color.RED);
+                }
+                if (Mr.getText()=="O" && Tr.getText()=="O"){
+                    Buttons.setBackground(Color.RED);
+                }
+            }
         }
         if (TurnCount==8) {
+            //XWin
+            if (Mm.getText() == "X") {
+                if (Ml.getText()=="X" &&Mr.getText()=="X" ) {
+                    Buttons.setBackground(Color.RED);
+                }
+                if (Tm.getText()=="X" && Bm.getText()=="X") {
+                    Buttons.setBackground(Color.RED);
+                }
+                if (Tl.getText()=="X" && Br.getText()=="X") {
+                    Buttons.setBackground(Color.RED);
+                }
+                if (Tr.getText()=="X" && Bl.getText()=="X") {
+                    Buttons.setBackground(Color.RED);
+                }
+            }
+            if (Tl.getText()=="X") {
+                if (Tm.getText()=="X" && Tr.getText()=="X") {
+                    Buttons.setBackground(Color.RED);
+                }
+                if (Ml.getText()=="X" && Bl.getText()=="X"){
+                    Buttons.setBackground(Color.RED);
+                }
+            }
+            if (Br.getText()=="X") {
+                if (Bm.getText()=="X" && Bl.getText()=="X") {
+                    Buttons.setBackground(Color.RED);
+                }
+                if (Mr.getText()=="X" && Tr.getText()=="X"){
+                    Buttons.setBackground(Color.RED);
+                }
+            }
 
+
+            //O WIn
+            if (Mm.getText()=="O") {
+                if (Ml.getText()=="O" && Mr.getText()=="O") {
+                    Buttons.setBackground(Color.RED);
+                }
+                if (Tm.getText()=="O" && Bm.getText()=="O") {
+                    Buttons.setBackground(Color.RED);
+                }
+                if (Tl.getText()=="O" && Br.getText()=="O") {
+                    Buttons.setBackground(Color.RED);
+                }
+                if (Tr.getText()=="O" && Bl.getText()=="O"){
+                    Buttons.setBackground(Color.RED);
+                }
+            }
+            if (Tl.getText()=="O") {
+                if (Tm.getText()=="O" && Tr.getText()=="O") {
+                    Buttons.setBackground(Color.RED);
+                }
+                if (Ml.getText()=="O" && Bl.getText()=="O"){
+                    Buttons.setBackground(Color.RED);
+                }
+            }
+            if (Br.getText()=="O") {
+                if (Bm.getText()=="O" && Bl.getText()=="O") {
+                    Buttons.setBackground(Color.RED);
+                }
+                if (Mr.getText()=="O" && Tr.getText()=="O"){
+                    Buttons.setBackground(Color.RED);
+                }
+            }
         }
         if (TurnCount==9) {
-            System.out.println("The Board is full");
-
-            if (TurnCount == 9) {
-                System.out.println("It's a draw");
+            //XWin
+            if (Mm.getText() == "X") {
+                if (Ml.getText()=="X" &&Mr.getText()=="X" ) {
+                    Buttons.setBackground(Color.RED);
+                }
+                if (Tm.getText()=="X" && Bm.getText()=="X") {
+                    Buttons.setBackground(Color.RED);
+                }
+                if (Tl.getText()=="X" && Br.getText()=="X") {
+                    Buttons.setBackground(Color.RED);
+                }
+                if (Tr.getText()=="X" && Bl.getText()=="X") {
+                    Buttons.setBackground(Color.RED);
+                }
             }
+            if (Tl.getText()=="X") {
+                if (Tm.getText()=="X" && Tr.getText()=="X") {
+                    Buttons.setBackground(Color.RED);
+                }
+                if (Ml.getText()=="X" && Bl.getText()=="X"){
+                    Buttons.setBackground(Color.RED);
+                }
+            }
+            if (Br.getText()=="X") {
+                if (Bm.getText()=="X" && Bl.getText()=="X") {
+                    Buttons.setBackground(Color.RED);
+                }
+                if (Mr.getText()=="X" && Tr.getText()=="X"){
+                    Buttons.setBackground(Color.RED);
+                }
+            }
+
+
+            //O WIn
+            if (Mm.getText()=="O") {
+                if (Ml.getText()=="O" && Mr.getText()=="O") {
+                    Buttons.setBackground(Color.RED);
+                }
+                if (Tm.getText()=="O" && Bm.getText()=="O") {
+                    Buttons.setBackground(Color.RED);
+                }
+                if (Tl.getText()=="O" && Br.getText()=="O") {
+                    Buttons.setBackground(Color.RED);
+                }
+                if (Tr.getText()=="O" && Bl.getText()=="O"){
+                    Buttons.setBackground(Color.RED);
+                }
+            }
+            if (Tl.getText()=="O") {
+                if (Tm.getText()=="O" && Tr.getText()=="O") {
+                    Buttons.setBackground(Color.RED);
+                }
+                if (Ml.getText()=="O" && Bl.getText()=="O"){
+                    Buttons.setBackground(Color.RED);
+                }
+            }
+            if (Br.getText()=="O") {
+                if (Bm.getText()=="O" && Bl.getText()=="O") {
+                    Buttons.setBackground(Color.RED);
+                }
+                if (Mr.getText()=="O" && Tr.getText()=="O"){
+                    Buttons.setBackground(Color.RED);
+                }
+            }
+
+        }
+        if (btn.matches("Reset")) {
+            Tl.setText("");
+            Tm.setText("");
+            Tr.setText("");
+            Ml.setText("");
+            Mm.setText("");
+            Mr.setText("");
+            Bl.setText("");
+            Bm.setText("");
+            Br.setText("");
         }
     }
 }
