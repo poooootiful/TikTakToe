@@ -1,3 +1,5 @@
+import com.sun.source.tree.IfTree;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -8,6 +10,8 @@ public class TicTacToe extends JFrame implements ActionListener {
     JPanel Buttons = new JPanel();
     JPanel TurnText = new JPanel();
     JPanel ResetPanel = new JPanel();
+
+    JLabel WhoTurn= new JLabel();
 
      JButton Tr = new JButton("Tr");
      JButton Tm = new JButton("Tm");
@@ -26,10 +30,13 @@ public class TicTacToe extends JFrame implements ActionListener {
 
     int TurnCount = 0;
 
+
+
     public static int random (){
         int number = 1 + (int) (2 * Math.random());
         return number;
     }
+
     TicTacToe() {
         frame.setSize(500,700);
 
@@ -39,7 +46,6 @@ public class TicTacToe extends JFrame implements ActionListener {
 
         TurnText.setSize(500,100);
         frame.add(TurnText);
-        JLabel WhoTurn= new JLabel();
         TurnText.add(WhoTurn);
 
         frame.add(ResetPanel);
@@ -72,25 +78,40 @@ public class TicTacToe extends JFrame implements ActionListener {
 
         //Who Start
         TurnCheck = random();
-        System.out.println(TurnCheck);
 
         do {
 
-
-            while (TurnCheck == Xturn) {
+            if (TurnCheck == Xturn) {
                 WhoTurn.setText("It's X Turn");
                 TurnCount = TurnCount + 1;
             }
-            while (TurnCheck == Oturn) {
+            if (TurnCheck == Oturn) {
                 WhoTurn.setText("It's O Turn");
                 TurnCount = TurnCount + 1;
             }
-        }while (TurnCount!=9);
+        }while (TurnCount>=9);
+        if (TurnCount==9) {
+            System.out.println("The Board is full");
+
+            if (TurnCount==9){System.out.println("It's a draw");
+            }
+        }
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
         String btn = e.getActionCommand();
+
+        if (TurnCount==6) {
+            String tl = Tl.getText().toString();
+            System.out.println(tl);
+        }
+        if (TurnCount==7) {
+
+        }
+        if (TurnCount==8) {
+
+        }
 
         //Tl Button
         if (TurnCheck==Xturn && btn.matches("Tl")) {
